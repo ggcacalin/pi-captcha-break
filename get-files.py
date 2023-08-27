@@ -3,6 +3,7 @@ import requests
 import os
 
 df = pd.read_csv("cgheorgh-challenge-filenames.csv", names=["File","RIP"])
+#Drop extra column
 df = df.drop(columns=['RIP'])
 for image in df["File"]:
  os.environ['no_proxy'] = ""
